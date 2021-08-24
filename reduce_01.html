@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+const list = ['hi','boo','boo','hello','ada','ada','ada'];
+
+// count the occurrence of each word 
+const result = list.reduce(function(previous,current){ //we are going to be adding the number of times a word appears within a list.  As you can see here, now we have a couple of words that appear more than once.  And we are assigning that to a list.  
+
+	if (current in previous) {
+        previous [current] += 1
+    } 
+    
+    else {
+        previous[current] = 1; // this is the code - else {} - that starts recounting then organizing new objects/items that are identical within the array in question.  
+    } 
+    return previous;
+    
+    //-------------------------- //now in this case we have the previous and the current just as before.  But note that my intial value is an object...
+    //       YOUR CODE           // 
+    //--------------------------
+
+},{});  // < - but note that our intial value is an object ,{}).  And what I am going to do within this object is I am going to add each of those words as properties.  And then every single time I see that word again, I will increase the value of that property by 1. So let me go ahead and start to write that code above...
+
+// write to console
+console.log('result: ' + JSON.stringify(result));
+
+</script>
+</html>

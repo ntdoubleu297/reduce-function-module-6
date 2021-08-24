@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<script>
+
+const numbers = [1, 1, 2, 3, 5, 8];
+
+// add array items using reduce
+const total = numbers.reduce(function(previous, current) { // in line 8 I am calling the reduce function.  Line 5 I have an array of numbers.  Note the parameters of the call back function.  
+	return previous + current;//-------------------------- //we have a precious parameter and a current one.  Most methods that take a simple call back simply take the current position of that array.
+    //       YOUR CODE
+    //--------------------------
+}, 0); // we also have here an optional additional value, which in this case I have set to '0'. Now what I want to do is simply add up the numbers of this array - return previous + current; 
+// now on the next iteration, the next call of this call back function, the 'previous' value will have that summation.  And we will then use that to add it to the current array postiion.  Which we will then return, and then we will add to the next postition in the array
+// write to console
+// so as you can see there we are slowly moving from left to right, carrying the summation forward, and at the very end we're saying we assign that to the variable of 'total'.  
+console.log('total: ' + total); // we then write that to the console.  
+
+</script>
+</html>
